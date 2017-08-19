@@ -210,7 +210,7 @@
             $(card).jarallax('destroy').css('position', '');
         }
 
-        if ($.fn.jarallax && !$.isMobile()) {
+        if ($.fn.jarallax ) {
             $(window).on('update.parallax', function(event) {
                 setTimeout(function() {
                     var $jarallax = $('.mbr-parallax-background');
@@ -553,9 +553,9 @@
         $(document).ready(function() {
             // disable animation on scroll on mobiles
             if ($.isMobile()) {
-                return;
+            //    return;
                 // enable animation on scroll
-            } else if ($('input[name=animation]').length) {
+            }  if ($('input[name=animation]').length) {
                 $('input[name=animation]').remove();
 
                 var $animatedElements = $('p, h1, h2, h3, h4, h5, a, button, small, img, li, blockquote, .mbr-author-name, em, label, input, textarea, .input-group, .iconbox, .btn-social, .mbr-figure, .mbr-map, .mbr-testimonial .card-block, .mbr-price-value, .mbr-price-figure, .dataTable, .dataTables_info').not(function() {
